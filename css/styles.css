@@ -1,0 +1,38 @@
+/* mainContainer */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.2;
+        filter: alpha(opacity=50);
+    }
+    to {
+        opacity: 0.6;
+        filter: alpha(opacity=50);
+    }
+}
+
+body {
+    margin: 0 0 0 0;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+}
+
+section#main {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/mainBackground.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation-name: fadeIn;
+    animation-duration: 10s;
+    opacity: 0.6;
+    filter: alpha(opacity=50);
+}
+
+.invisible {
+    visibility: hidden;
+}
