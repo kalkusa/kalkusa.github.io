@@ -28,9 +28,10 @@ header {
   filter: alpha(opacity=100);
 }
 header nav {
+  overflow: hidden;
   text-align: center;
   padding: 0;
-  height: 2.8em;
+  height: 2.7em;
 }
 header nav ul {
   list-style: none;
