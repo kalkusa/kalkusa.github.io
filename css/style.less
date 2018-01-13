@@ -1,5 +1,5 @@
-/* mainContainer */
-
+@smallScreen: ~"only screen and (max-width: 479px)";
+@bigScreen: ~"only screen and (min-width: 480px)";
 @keyframes fadeIn {
     from {
         opacity: 0.0;
@@ -23,7 +23,10 @@ body {
 
 section#main {
     width: 100%;
-    height: 100%;
+    height: 100%; // margin-left: 30%;
+    // margin-right: 30%;
+    // margin-top: 20%;
+    // margin-bottom: 20%;
 }
 
 .mainBg {
@@ -46,30 +49,34 @@ section#main {
 
 .aboutMeHome {
     position: absolute;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); 
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 20%;
-    margin-bottom: auto;
+    top: 20%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-.bigYo {
-    font-size: 4rem;
+@media @bigScreen {
+    .bigYo {
+        font-size: 8rem;
+    }
+    .name {
+        font-size: 4rem;
+    }
+    .lookHowCuteIam {
+        font-size: 2rem;
+    }
 }
 
-.name {
-    font-size: 3rem;
+@media @smallScreen {
+    .bigYo {
+        font-size: 3rem;
+    }
+    .name {
+        font-size: 2rem;
+    }
+    .lookHowCuteIam {
+        font-size: 1rem;
+    }
 }
-
-.lookHowCuteIam {
-    font-size: 1rem;
-}
-
-/* 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #252a30
-} */
