@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/vue.min.js"></script>
 	<script src="js/script.js"></script>
 	<title>Arkadiusz K.</title>
 </head>
@@ -17,15 +18,15 @@
 					<li>
 						<a href="#main" onclick="navigate('main')"> Home </a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#about"> Work </a>
-					</li>
+					</li> -->
 					<li>
 						<a href="#about" onclick="navigate('about')"> About </a>
 					</li>
-					<li>
+					<!-- <li>
 						<a href="#about" > Contact </a>
-					</li>
+					</li> -->
 				</ul>
 			</nav>
 		</header>
@@ -47,8 +48,24 @@
 		</section>
 		<section id="about" class="invisible">
 			<div class="aboutBg"></div>
-			<div class="aboutContent">
-				Hi hello :)
+			<div class="aboutContentBox">
+				<div class="aboutContent">
+					<p>My name is
+						<b>Arkadiusz Kaɫkus</b>. </p>
+					<p> I'm
+						<b>full stack web developer</b>.
+					</p>
+					<p>My technology stack is
+						<b>C# /.NET / SQL</b> on
+						<u>backend</u> and
+						<b>Angular / JavaScript </b> on
+						<u>frontend</u>.
+					</p>
+					<p>I have {{experience}} years of professional experience.</p>
+					<p>I received M.Sc., and licenciate degrees from the University of Łódź, Poland.</p>
+					<!-- <p>I hold a Master of Computer Science from University of Łódź, Poland.</p> -->
+					<!-- https://www.dailywritingtips.com/masters-degree-or-masters-degree/ -->
+				</div>
 			</div>
 		</section>
 		<section id="contact" class="invisible">

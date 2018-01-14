@@ -77,11 +77,13 @@ section {
   color: #000000;
   margin-left: 30%;
   margin-right: 30%;
-  top: 25%;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 @media only screen and (min-width: 480px) {
+  #main .aboutMeHome {
+    top: 25%;
+  }
   #main .aboutMeHome .bigYo {
     font-size: 8rem;
   }
@@ -93,6 +95,9 @@ section {
   }
 }
 @media only screen and (max-width: 479px) {
+  #main .aboutMeHome {
+    top: 12.5%;
+  }
   #main .aboutMeHome .bigYo {
     font-size: 3rem;
   }
@@ -109,7 +114,9 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  opacity: 0.8;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  opacity: 0.6;
   filter: alpha(opacity=50);
   position: absolute;
 }
@@ -123,14 +130,32 @@ section {
     background-image: url("../images/me.jpeg");
   }
 }
-#about .aboutContent {
-  color: #ffffff;
-  margin-left: 30%;
-  margin-right: 30%;
-  top: 25%;
+#about .aboutContentBox {
+  margin-left: 7.5%;
+  margin-right: 7.5%;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   position: absolute;
+}
+@media only screen and (min-width: 480px) {
+  #about .aboutContentBox {
+    top: 12.5%;
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #about .aboutContentBox {
+    color: #000000;
+    width: 83%;
+    background-color: rgba(255, 255, 255, 0.75);
+    top: 6.25%;
+    font-size: 1em;
+  }
+}
+#about .aboutContentBox .aboutContent {
+  padding: 2em 2em 2em 2em;
 }
 .invisible {
   display: none;
