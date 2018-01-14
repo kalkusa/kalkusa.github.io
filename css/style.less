@@ -79,8 +79,9 @@ section {
         height: 100%;
         background-image: url("../images/mainBackground.jpeg");
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
+        background-repeat: no-repeat; //background-position: center center;
+        background-position-x: left;
+        background-position-y: top;
         animation-name: fadeIn;
         animation-duration: 10s;
         opacity: 0.6;
@@ -120,7 +121,26 @@ section {
     }
 }
 
-#about {}
+#about {
+    .aboutBg {
+        width: 100%;
+        height: 100%;
+        @media @bigScreen {
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, rgba(0, 0, 0, 1)), url("../images/me.jpg");
+        }
+        @media @smallScreen {
+            background-image: url("../images/me.jpg");
+        }
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-position-x: left;
+        background-position-y: top; // animation-name: fadeIn;
+        // animation-duration: 10s;
+        opacity: 0.8;
+        filter: alpha(opacity=50); // position: absolute;
+    }
+}
 
 .invisible {
     visibility: hidden;
