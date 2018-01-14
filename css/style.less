@@ -134,14 +134,21 @@ section {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        background-position-x: left;
-        background-position-y: top; // animation-name: fadeIn;
-        // animation-duration: 10s;
         opacity: 0.8;
-        filter: alpha(opacity=50); // position: absolute;
+        filter: alpha(opacity=50);
+        position: absolute;
+    }
+    .aboutContent {
+        color: rgb(255, 255, 255);
+        margin-left: @marginLeft;
+        margin-right: @marginRight;
+        top: @marginTop;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        position: absolute;
     }
 }
 
 .invisible {
-    visibility: hidden;
+    display: none;
 }

@@ -109,10 +109,9 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-position-x: left;
-  background-position-y: top;
   opacity: 0.8;
   filter: alpha(opacity=50);
+  position: absolute;
 }
 @media only screen and (min-width: 480px) {
   #about .aboutBg {
@@ -124,6 +123,15 @@ section {
     background-image: url("../images/me.jpg");
   }
 }
+#about .aboutContent {
+  color: #ffffff;
+  margin-left: 30%;
+  margin-right: 30%;
+  top: 25%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  position: absolute;
+}
 .invisible {
-  visibility: hidden;
+  display: none;
 }
