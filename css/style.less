@@ -18,6 +18,7 @@
 @marginRight: 30%;
 @marginTop: 25%;
 @navigationBackgroundColor: #333;
+@navHeight: 2em+0.7em;
 
 /* Styles */
 
@@ -43,7 +44,7 @@ header {
         overflow: hidden;
         text-align: center;
         padding: 0;
-        height: 2em+0.7em;
+        height: @navHeight;
         ul {
             list-style: none;
             margin: 0;
@@ -145,7 +146,7 @@ section {
         margin-left: @marginLeft/4;
         margin-right: @marginLeft/4;
         @media @bigScreen {
-            top: @marginTop/2;
+            top: @navHeight+@marginTop/2;
             width: 25%;
             background-color: rgba(255, 255, 255, 0.2);
             font-size: 1.2em;
