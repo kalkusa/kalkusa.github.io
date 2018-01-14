@@ -1,5 +1,7 @@
 @smallScreen: ~"only screen and (max-width: 479px)";
-@bigScreen: ~"only screen and (min-width: 480px)";
+// @middleScreen: ~"only screen and(min-width: 480px) and(max-width: 949px)";
+@middleScreen: ~"only screen and (min-width: 480px) and (max-width: 949px)";
+@bigScreen: ~"only screen and (min-width: 950px)";
 @keyframes fadeIn {
     from {
         opacity: 0.0;
@@ -108,6 +110,18 @@ section {
                 font-size: 2rem;
             }
         }
+        @media @middleScreen {
+            top: @marginTop;
+            .bigYo {
+                font-size: 8rem;
+            }
+            .name {
+                font-size: 4rem;
+            }
+            .lookHowCuteIam {
+                font-size: 2rem;
+            }
+        }
         @media @smallScreen {
             top: @marginTop/2;
             .bigYo {
@@ -130,6 +144,9 @@ section {
         @media @bigScreen {
             background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, rgba(0, 0, 0, 1)), url("../images/me.jpeg");
         }
+        @media @middleScreen {
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, rgba(0, 0, 0, 1)), url("../images/me.jpeg");
+        }
         @media @smallScreen {
             background-image: url("../images/me.jpeg");
         }
@@ -140,14 +157,20 @@ section {
         animation-duration: 2s;
         opacity: 0.6;
         filter: alpha(opacity=50);
-        position: absolute;
+        position: absolute; //top:@navHeight;
     }
     .aboutContentBox {
         margin-left: @marginLeft/4;
         margin-right: @marginLeft/4;
         @media @bigScreen {
-            top: @navHeight+@marginTop/2;
+            top: @marginTop/2;
             width: 25%;
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 1.2em;
+        }
+        @media @middleScreen {
+            top: @marginTop/2;
+            width: 100%-((@marginLeft/4)+(@marginRight/4)+2px);
             background-color: rgba(255, 255, 255, 0.2);
             font-size: 1.2em;
         }
@@ -155,7 +178,7 @@ section {
             color: rgb(0, 0, 0);
             width: 100%-((@marginLeft/4)+(@marginRight/4)+2px);
             background-color: rgba(255, 255, 255, 0.75);
-            top: @navHeight+@marginTop/4;
+            top: calc(~"3em + 20px");
             font-size: 1em;
         }
         font-family: 'Montserrat',

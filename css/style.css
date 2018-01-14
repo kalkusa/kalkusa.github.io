@@ -80,7 +80,21 @@ section {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 950px) {
+  #main .aboutMeHome {
+    top: 25%;
+  }
+  #main .aboutMeHome .bigYo {
+    font-size: 8rem;
+  }
+  #main .aboutMeHome .name {
+    font-size: 4rem;
+  }
+  #main .aboutMeHome .lookHowCuteIam {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 949px) {
   #main .aboutMeHome {
     top: 25%;
   }
@@ -120,7 +134,12 @@ section {
   filter: alpha(opacity=50);
   position: absolute;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 950px) {
+  #about .aboutBg {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, #000000), url("../images/me.jpeg");
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 949px) {
   #about .aboutBg {
     background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, #000000), url("../images/me.jpeg");
   }
@@ -137,10 +156,18 @@ section {
   font-weight: 200;
   position: absolute;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 950px) {
   #about .aboutContentBox {
-    top: 15.2em;
+    top: 12.5%;
     width: 25%;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 949px) {
+  #about .aboutContentBox {
+    top: 12.5%;
+    width: 83%;
     background-color: rgba(255, 255, 255, 0.2);
     font-size: 1.2em;
   }
@@ -150,7 +177,7 @@ section {
     color: #000000;
     width: 83%;
     background-color: rgba(255, 255, 255, 0.75);
-    top: 8.95em;
+    top: calc(3em + 20px);
     font-size: 1em;
   }
 }
