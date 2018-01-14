@@ -99,13 +99,13 @@ section {
     top: 25%;
   }
   #main .aboutMeHome .bigYo {
-    font-size: 8rem;
+    font-size: 6rem;
   }
   #main .aboutMeHome .name {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   #main .aboutMeHome .lookHowCuteIam {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 479px) {
