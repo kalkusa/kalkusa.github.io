@@ -160,21 +160,24 @@ section {
         position: absolute; //top:@navHeight;
     }
     .aboutContentBox {
-        margin-left: @marginLeft/4;
-        margin-right: @marginLeft/4;
         @media @bigScreen {
+            margin-left: 0.5*(@marginLeft/4);
             top: @marginTop/2;
             width: 25%;
             background-color: rgba(255, 255, 255, 0.2);
             font-size: 1.2em;
         }
         @media @middleScreen {
+            margin-left: @marginLeft/4;
+            margin-right: @marginLeft/4;
             top: @marginTop/2;
             width: 100%-((@marginLeft/4)+(@marginRight/4)+2px);
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.4);
             font-size: 1.2em;
         }
         @media @smallScreen {
+            margin-left: @marginLeft/4;
+            margin-right: @marginLeft/4;
             color: rgb(0, 0, 0);
             width: 100%-((@marginLeft/4)+(@marginRight/4)+2px);
             background-color: rgba(255, 255, 255, 0.75);
