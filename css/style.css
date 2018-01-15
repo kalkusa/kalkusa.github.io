@@ -61,7 +61,7 @@ section {
 #main .mainBg {
   width: 100%;
   height: 100%;
-  background-image: url("../images/mainBackground.jpeg");
+  background-image: url("../images/backgrounds/home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: left;
@@ -136,17 +136,17 @@ section {
 }
 @media only screen and (min-width: 950px) {
   #about .aboutBg {
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, #000000), url("../images/me.jpeg");
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, #000000), url("../images/backgrounds/about.jpg");
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 949px) {
   #about .aboutBg {
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, #000000), url("../images/me.jpeg");
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0) 45%, #000000), url("../images/backgrounds/about.jpg");
   }
 }
 @media only screen and (max-width: 479px) {
   #about .aboutBg {
-    background-image: url("../images/me.jpeg");
+    background-image: url("../images/backgrounds/about.jpg");
   }
 }
 #about .aboutContentBox {
@@ -187,6 +187,55 @@ section {
 #about .aboutContentBox .aboutContent {
   padding: 2em 2em 2em 2em;
 }
+#contact .contactBg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/backgrounds/contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  opacity: 0.6;
+  filter: alpha(opacity=50);
+  position: absolute;
+}
+#contact .contactContentBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 950px) {
+  #contact .contactContentBox {
+    margin-left: 30%;
+    margin-right: 30%;
+    top: 12.5%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 949px) {
+  #contact .contactContentBox {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    top: 12.5%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #contact .contactContentBox {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    top: calc(3em + 20px);
+  }
+}
+#contact .contactContentBox .contactContentItem {
+  padding: 1em 1em 1em 1em;
+  max-width: 70px;
+  max-height: 70px;
+}
 .invisible {
   display: none;
+}
+.makeImageGrey {
+  filter: grayscale(100%);
 }
