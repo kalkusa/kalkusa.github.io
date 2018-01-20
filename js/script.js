@@ -1,7 +1,5 @@
 window.onload = function () {
-    console.log('loaded');
-    let body = document.querySelector('body');
-    body.classList.add('loaded');
+    onPageLoaded(0);
     this.currentSection = "main";
 
     var app = new Vue({
@@ -18,4 +16,11 @@ function navigate(sectionName) {
     section = document.querySelector('section#' + sectionName);
     section.classList.remove('invisible');
     this.currentSection = sectionName;
+}
+
+function onPageLoaded(timeout) {
+    setTimeout(() => {
+        let body = document.querySelector('body');
+        body.classList.add('loaded');
+    }, timeout);
 }
