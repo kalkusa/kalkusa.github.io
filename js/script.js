@@ -1,4 +1,7 @@
 window.onload = function () {
+    console.log('loaded');
+    let body = document.querySelector('body');
+    body.classList.add('loaded');
     this.currentSection = "main";
 
     var app = new Vue({
