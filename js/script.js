@@ -1,5 +1,5 @@
 window.onload = function () {
-    onPageLoaded(0);
+    onPageLoaded(500);
     this.currentSection = "main";
 
     var app = new Vue({
