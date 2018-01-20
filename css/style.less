@@ -1,4 +1,4 @@
-    @smallScreen: ~"only screen and (max-width: 479px)"; // @middleScreen: ~"only screen and(min-width: 480px) and(max-width: 949px)";
+    @smallScreen: ~"only screen and (max-width: 479px)";
     @middleScreen: ~"only screen and (min-width: 480px) and (max-width: 949px)";
     @bigScreen: ~"only screen and (min-width: 950px)";
     @keyframes fadeIn {
@@ -241,4 +241,17 @@
 
     .makeImageGrey {
         filter: grayscale(100%);
+    }
+
+    .center {
+        width: 50%;
+        height: 50%;
+        overflow: auto;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: solid black;
     }

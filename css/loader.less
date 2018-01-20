@@ -1,3 +1,6 @@
+@smallScreen: ~"only screen and (max-width: 479px)";
+@middleScreen: ~"only screen and (min-width: 480px) and (max-width: 949px)";
+@bigScreen: ~"only screen and (min-width: 950px)";
 #loader-wrapper {
     background-color: black;
     width: 100%;
@@ -5,7 +8,52 @@
     z-index: 1000;
     position: fixed;
     text-align: center;
-    padding-top: 25%;
+    .loader,
+    .loader:after {
+        border-radius: 50%;
+        @media @bigScreen {
+            width: 10em;
+            height: 10em;
+            top: 40%;
+        }
+        @media @middleScreen {
+            width: 7em;
+            height: 7em;
+            top: 40%;
+        }
+        @media @smallScreen {
+            width: 3em;
+            height: 3em;
+            top: 50%;
+        }
+        z-index: 1001;
+        margin: auto;
+        position:relative;
+        
+        transform: translateY(-50%);
+    }
+    .loader {
+        // margin: auto;
+        @media @bigScreen {
+            font-size: 1em;
+        }
+        @media @middleScreen {
+            font-size: 0.7em;
+        }
+        @media @smallScreen {
+            font-size: 0.2em;
+        } // position: absolute;
+        // text-indent: -9999em;
+        border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+        border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+        border-left: 1.1em solid #ffffff;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation: load8 1.1s infinite linear;
+        animation: load8 1.1s infinite linear;
+    }
 }
 
 .loaded {
@@ -15,31 +63,6 @@
         -webkit-transition: all 1.5s ease-out;
         transition: all 1.5s ease-out;
     }
-}
-
-.loader,
-.loader:after {
-    border-radius: 50%;
-    width: 10em;
-    height: 10em;
-    z-index: 1001;
-    margin: auto;
-}
-
-.loader {
-    margin: 60px auto;
-    font-size: 10px;
-    position: relative;
-    text-indent: -9999em;
-    border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-    border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-    border-left: 1.1em solid #ffffff;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-animation: load8 1.1s infinite linear;
-    animation: load8 1.1s infinite linear;
 }
 
 @-webkit-keyframes load8 {
