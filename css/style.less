@@ -134,6 +134,42 @@ section {
 }
 
 #cv {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .tip {
+    padding: 10px;
+    min-width: 20px;
+    max-width: 150px;
+    background-color: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    z-index: 1;
+  }
+  .tip p {
+    margin: 0;
+    color: black;
+    font-family: "Verdana";
+  }
+  .l-tip::after,
+  .r-tip::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  .l-tip::after {
+    bottom: -22px;
+    right: -10px;
+    transform: rotate(-45deg);
+  }
+  .r-tip::after {
+    left: -10px;
+    bottom: -22px;
+    transform: rotate(45deg);
+  }
+
   .cvBg {
     width: 100%;
     height: 100%;

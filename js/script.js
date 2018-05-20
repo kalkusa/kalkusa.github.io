@@ -33,7 +33,9 @@ function onPageLoaded(timeout) {
 }
 
 function preloadImages(onCompleted) {
-    var images = Array.from(document.images).map(image => { return image.src; }).concat(getBackgroundImages());
+    var images = Array.from(document.images).map(image => {
+        return image.src;
+    }).concat(getBackgroundImages());
     console.log(images);
     imagesCount = images.length;
     loadedImagesCount = 0;
@@ -54,7 +56,8 @@ function preloadImage(url, callback) {
 }
 
 function getBackgroundImages() {
-    var url, B = [], A = document.getElementsByTagName('*');
+    var url, B = [],
+        A = document.getElementsByTagName('*');
     A = B.slice.call(A, 0, A.length);
     while (A.length) {
         url = document.deepCss(A.shift(), 'background-image');
@@ -88,3 +91,44 @@ Array.prototype.indexOf = Array.prototype.indexOf ||
         }
         return -1;
     }
+
+//Tooltips on CV
+//TODO Rework to vanilla js
+
+var initWidth = 1366;
+
+function setAnchorPointLeft(elem, y, x) {
+    var w = $(window).width();
+    var fraction = w / initWidth;
+    elem.css('top', y * fraction - elem.outerHeight() - 15.29 + 'px')
+    elem.css('left', x * fraction - elem.outerWidth() - 15.29 + "px")
+}
+
+function setAnchorPointRight(elem, y, x) {
+    var w = $(window).width();
+    var fraction = w / initWidth;
+
+    elem.css('top', y * fraction - elem.outerHeight() - 15.29 + 'px')
+    elem.css('right', x * fraction - elem.outerWidth() - 15.29 + "px")
+}
+
+function align() {
+    $('.r-tip').each(function (index, item) {
+        let y = $(item).attr('y');
+        let x = $(item).attr('x');
+        setAnchorPointRight($(item), y, x);
+    });
+
+    $('.l-tip').each(function (index, item) {
+        let y = $(item).attr('y');
+        let x = $(item).attr('x');
+        setAnchorPointLeft($(item), y, x);
+    });
+}
+
+$(function () {
+    align();
+    $(window).resize(function () {
+        align();
+    });
+});
