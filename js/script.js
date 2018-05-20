@@ -23,6 +23,7 @@ function navigate(sectionName) {
     section = document.querySelector('section#' + sectionName);
     section.classList.remove('invisible');
     currentSection = sectionName;
+    align();
 }
 
 function onPageLoaded(timeout) {
@@ -95,7 +96,8 @@ Array.prototype.indexOf = Array.prototype.indexOf ||
 //Tooltips on CV
 //TODO Rework to vanilla js
 
-var initWidth = 1366;
+//var initWidth = 1366;
+var initWidth = 1000;
 
 function setAnchorPointLeft(elem, y, x) {
     var w = $(window).width();
@@ -126,9 +128,16 @@ function align() {
     });
 }
 
-$(function () {
+
+// $(document).ready(function () {
+//     align();
+//     $(window).resize(function () {
+//         //console.log('window resize')
+//         align();
+//     });
+// });
+
+$(window).resize(function () {
+    //console.log('window resize')
     align();
-    $(window).resize(function () {
-        align();
-    });
 });
