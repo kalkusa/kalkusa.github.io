@@ -34,6 +34,7 @@ function onPageLoaded(timeout) {
 
 function preloadImages(onCompleted) {
     var images = Array.from(document.images).map(image => { return image.src; }).concat(getBackgroundImages());
+    console.log(images);
     imagesCount = images.length;
     loadedImagesCount = 0;
     for (var imgNo in images) {
