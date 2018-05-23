@@ -128,16 +128,15 @@ function align() {
     });
 }
 
-
-// $(document).ready(function () {
-//     align();
-//     $(window).resize(function () {
-//         //console.log('window resize')
-//         align();
-//     });
-// });
-
 $(window).resize(function () {
-    //console.log('window resize')
-    align();
+    let container= $('#container');
+    let containerRatio = container.height()/container.width();
+    let cvBgImgRatio = 2827/4465;
+    if(containerRatio>=cvBgImgRatio){
+        //console.log('Image is still');
+    }else{
+        //console.log('Image is resizing');
+        align();
+    }
+    
 });
