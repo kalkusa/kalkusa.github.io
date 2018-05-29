@@ -143,7 +143,7 @@ section {
     min-width: 20px;
     max-width: 250px;
     background-color: rgba(255, 255, 255, 0.75);
-    position: absolute;
+    position: fixed;
     z-index: 1;
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
@@ -153,24 +153,24 @@ section {
     color: black;
     font-family: "Verdana";
   }
-  .l-tip::after,
-  .r-tip::after {
-    content: "";
-    position: absolute;
-    width: 3px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.75);
-  }
-  .l-tip::after {
-    bottom: -22px;
-    right: -10px;
-    transform: rotate(-45deg);
-  }
-  .r-tip::after {
-    left: -10px;
-    bottom: -22px;
-    transform: rotate(45deg);
-  }
+  // .l-tip::after,
+  // .r-tip::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 3px;
+  //   height: 30px;
+  //   background-color: rgba(255, 255, 255, 0.75);
+  // }
+  // .l-tip::after {
+  //   bottom: -22px;
+  //   right: -10px;
+  //   transform: rotate(-45deg);
+  // }
+  // .r-tip::after {
+  //   left: -10px;
+  //   bottom: -22px;
+  //   transform: rotate(45deg);
+  // }
 
   .cvBg {
     width: 100%;
@@ -179,9 +179,10 @@ section {
     background-size: cover;
     // background-attachment: fixed;
     //background-size: 2827px;
-    background-repeat: no-repeat; //background-position: center center;
-    background-position-x: left;
-    background-position-y: top;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-position-x: left;
+    // background-position-y: top;
     animation-name: fadeIn;
     animation-duration: 10s;
     opacity: 0.6;
