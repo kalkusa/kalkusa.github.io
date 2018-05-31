@@ -136,7 +136,59 @@ section {
 #cv {
   width: 100%;
   height: 100vh;
-  position: relative;
+  //position: relative;
+  @media @bigScreen {
+    .lg {
+      display: unset;
+    }
+    .md {
+      display: none;
+    }
+    .sm {
+      display: none;
+    }
+  }
+  @media @middleScreen {
+    .lg {
+      display: none;
+    }
+    .md {
+      display: unset;
+    }
+    .sm {
+      display: none;
+    }
+  }
+  @media @smallScreen {
+    .lg {
+      display: none;
+    }
+    .md {
+      display: none;
+    }
+    .sm {
+      display: block;
+      position: relative;
+      overflow: scroll;
+      height: 100%;
+      .cvContentBox {
+        position: relative;
+        margin-left: @marginLeft / 4;
+        margin-right: @marginLeft / 4;
+        color: rgb(0, 0, 0);
+        width: 100%- ((@marginLeft / 4)+ (@marginRight / 4)+2px);
+        background-color: rgba(255, 255, 244, 0.75);
+        top: calc(~"3em + 20px");
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+        .cvPosition {
+          padding: 0.5em 2em 0.5em 2em;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
 
   .tip {
     padding: 10px;
@@ -185,7 +237,7 @@ section {
     // background-position-y: top;
     animation-name: fadeIn;
     animation-duration: 10s;
-    opacity: 0.6;
+    opacity: 0.4;
     filter: alpha(opacity=50);
     position: absolute;
   }
