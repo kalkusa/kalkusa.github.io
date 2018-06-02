@@ -19,8 +19,12 @@ body {
   width: 100%;
   overflow: hidden;
 }
-.navSpacer {
-  height: 2.7em;
+.topSpacer {
+  height: 3.5em;
+  width: 100%;
+}
+.bottomSpacer {
+  height: 1.5em;
   width: 100%;
 }
 header {
@@ -80,6 +84,33 @@ section {
   right: 0;
   border: solid black;
 }
+.tooltipPinpoint {
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  z-index: 1;
+}
+.tooltipContentLeft {
+  background-color: rgba(255, 255, 244, 0.75);
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  width: 15em;
+  padding: 1em;
+  position: absolute;
+  top: -11em;
+  left: -20em;
+  z-index: 3;
+}
+.tooltipLineLeft {
+  width: 3.5em;
+  top: -0.8em;
+  left: -3.2em;
+  border-top: 0.1em solid white;
+  position: absolute;
+  transform: rotate(210deg);
+  z-index: 2;
+}
 #cv {
   width: 100%;
   height: 100vh;
@@ -101,6 +132,52 @@ section {
   }
   #cv .md {
     display: unset;
+  }
+  #cv .md .horizontalTimeline {
+    width: 100%;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  #cv .md .horizontalTimeline ol {
+    width: 100%;
+    transition: all 1s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  #cv .md .horizontalTimeline ol li {
+    list-style: none;
+    position: relative;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0 5px;
+  }
+  #cv .md .horizontalTimeline ol li:not(:last-child):after {
+    content: "";
+    width: calc(86%);
+    height: 3px;
+    display: block;
+    background: #ffffff;
+    margin: 0;
+    position: absolute;
+    top: 4px;
+    left: calc(57%);
+  }
+  #cv .md .cvContentBox {
+    position: relative;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    color: #000000;
+    width: 83%;
+    background-color: rgba(255, 255, 244, 0.75);
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+  }
+  #cv .md .cvContentBox .cvPosition {
+    padding: 0.5em 2em 0.5em 2em;
   }
   #cv .sm {
     display: none;

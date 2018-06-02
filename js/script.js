@@ -9,13 +9,16 @@ var app;
 Vue.component("pinned-tooltip", {
   props: ["position", "company", "from", "to", "x", "y", "top", "left"],
   template: `
-<div class="tip l-tip" :x="x" :y="y" :style="{ top: top + 'px', left:left+'px'}">
-<p>
-  <b>{{position}}</b>
-</p>
-<p>{{company}}</p>
-<p>{{from}} - {{to}}</p>
-</div>`,
+            <div class="tooltipPinpoint" :x="x" :y="y" :style="{ top: top + 'px', left:left+'px'}">
+              <div class="tooltipLineLeft"></div>
+              <div class="tooltipContentLeft ">
+                <p>
+                  <b>{{position}}</b>
+                </p>
+                <p>{{company}}</p>
+                <p>{{from}} - {{to}}</p>
+              </div>
+            </div>`,
   created() {
     window.addEventListener("resize", this.updateComponentPosition);
     window.dispatchEvent(new Event('resize'));
