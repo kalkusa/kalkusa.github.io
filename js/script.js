@@ -7,11 +7,11 @@ var app;
 
 //Tooltips on CV
 Vue.component("pinned-tooltip", {
-  props: ["position", "company", "from", "to", "x", "y", "top", "left"],
+  props: ["position", "company", "from", "to", "x", "y", "top", "left", "direction"],
   template: `
-            <div class="tooltipPinpoint" :x="x" :y="y" :style="{ top: top + 'px', left:left+'px'}">
-              <div class="tooltipLineLeft"></div>
-              <div class="tooltipContentLeft ">
+            <div class="tooltipPinpoint" :x="x" :y="y" :style="{ top: top + 'px', left:left+'px'} ">
+              <div :class="direction === 'left' ? 'tooltipLineLeft' : 'tooltipLineRight'"></div>
+              <div :class = "direction === 'left' ? 'tooltipContentLeft' : 'tooltipContentRight'">
                 <p>
                   <b>{{position}}</b>
                 </p>
@@ -28,6 +28,22 @@ Vue.component("pinned-tooltip", {
     this.data();
   },
   methods: {
+    getTooltipLineClass() {
+      if (this.props['direction'] === 'left') {
+        return "tooltipLineLeft";
+      }
+      if (this.props['direction'] === 'right') {
+        return "tooltipLineRight";
+      }
+    },
+    getTooltipContentClass(property) {
+      if (property === 'left') {
+        return "tooltipContentLeft";
+      }
+      if (property === 'right') {
+        return "tooltipContentLeft";
+      }
+    },
     updateComponentPosition(e) {
       var windowWidth = e.target.innerWidth;
       var windowHeight = e.target.innerHeight;
