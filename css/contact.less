@@ -1,0 +1,44 @@
+@import "common.less";
+
+#contact {
+  .contactBg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/backgrounds/contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    opacity: 0.6;
+    filter: alpha(opacity=50);
+    position: absolute;
+  }
+  .contactContentBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media @bigScreen {
+      margin-left: @marginLeft;
+      margin-right: @marginRight;
+      top: @marginTop / 2;
+    }
+    @media @middleScreen {
+      margin-left: @marginLeft / 4;
+      margin-right: @marginLeft / 4;
+      top: @marginTop / 2;
+    }
+    @media @smallScreen {
+      margin-left: @marginLeft / 4;
+      margin-right: @marginLeft / 4;
+      top: calc(~"3em + 20px");
+    }
+    .contactContentItem {
+      padding: 1em 1em 1em 1em;
+      max-width: 70px;
+      max-height: 70px;
+    }
+  }
+}

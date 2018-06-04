@@ -1,0 +1,62 @@
+@import "common.less";
+
+#main {
+  .mainBg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/backgrounds/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; //background-position: center center;
+    background-position-x: left;
+    background-position-y: top;
+    animation-name: fadeIn;
+    animation-duration: 10s;
+    opacity: 0.6;
+    filter: alpha(opacity=50);
+    position: absolute;
+  }
+  .aboutMeHome {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    margin-left: @marginLeft;
+    margin-right: @marginRight;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    @media @bigScreen {
+      top: @marginTop;
+      .bigYo {
+        font-size: 8rem;
+      }
+      .name {
+        font-size: 4rem;
+      }
+      .lookHowCuteIam {
+        font-size: 2rem;
+      }
+    }
+    @media @middleScreen {
+      top: @marginTop;
+      .bigYo {
+        font-size: 6rem;
+      }
+      .name {
+        font-size: 3rem;
+      }
+      .lookHowCuteIam {
+        font-size: 1.5rem;
+      }
+    }
+    @media @smallScreen {
+      top: @marginTop / 2;
+      .bigYo {
+        font-size: 3rem;
+      }
+      .name {
+        font-size: 2rem;
+      }
+      .lookHowCuteIam {
+        font-size: 1rem;
+      }
+    }
+  }
+}

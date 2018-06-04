@@ -1,0 +1,226 @@
+@import "common.less";
+
+@distance-from-top: calc(~"3em + 20px");
+
+.tooltipPinpoint {
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  z-index: 1;
+}
+
+.tooltipContentLeft {
+  background-color: rgba(255, 255, 244, 0.75);
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  width: 15em;
+  padding: 1em;
+  position: absolute;
+  top: -10.9em;
+  left: -19.9em;
+  z-index: 3;
+}
+
+.tooltipLineLeft {
+  width: 3.5em;
+  top: -0.7em;
+  left: -3.2em;
+  border-top: 0.1em solid white;
+  position: absolute;
+  transform: rotate(210deg);
+  z-index: 2;
+}
+
+.tooltipContentRight {
+  background-color: rgba(255, 255, 244, 0.75);
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  width: 15em;
+  padding: 1em;
+  position: absolute;
+  top: -10.9em;
+  left: 3.3em;
+  z-index: 3;
+}
+
+.tooltipLineRight {
+  width: 3.5em;
+  top: -0.8em;
+  left: 0em;
+  border-top: 0.1em solid white;
+  position: absolute;
+  transform: rotate(155deg);
+  z-index: 2;
+}
+
+#cv {
+  width: 100%;
+  height: 100vh;
+  //position: relative;
+  //padding-top: calc(~"3em + 20px");
+
+  @media @bigScreen {
+    .lg {
+      display: unset;
+    }
+    .md {
+      display: none;
+    }
+    .sm {
+      display: none;
+    }
+  }
+  @media @middleScreen {
+    .lg {
+      display: none;
+    }
+    .md {
+      display: unset;
+      .horizontalTimeline {
+        width: 100%;
+        padding-top: 3em;
+        padding-bottom: 3em;
+        ol {
+          width: 100%;
+          transition: all 1s;
+          margin: 0;
+          padding: 0;
+
+          display: flex;
+          justify-content: space-between;
+          li {
+            list-style: none;
+            position: relative;
+            text-align: center;
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 0 5px;
+            &:not(:last-child) {
+              &:after {
+                content: "";
+                width: calc(100% - 14px);
+                height: 3px;
+                display: block;
+                background: #ffffff;
+                margin: 0;
+                position: absolute;
+                top: 4px;
+                left: calc(50% + 7px);
+              }
+            }
+          }
+        }
+      }
+      .cvContentBox {
+        position: relative;
+        margin-left: @marginLeft / 4;
+        margin-right: @marginLeft / 4;
+        color: rgb(0, 0, 0);
+        width: 100%- ((@marginLeft / 4)+ (@marginRight / 4)+2px);
+        background-color: rgba(255, 255, 244, 0.75);
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+        .cvPosition {
+          padding: 0.5em 2em 0.5em 2em;
+        }
+      }
+    }
+    .sm {
+      display: none;
+    }
+  }
+  @media @smallScreen {
+    .lg {
+      display: none;
+    }
+    .md {
+      display: none;
+    }
+    .sm {
+      display: block;
+      position: relative;
+      overflow: scroll;
+      height: 100%;
+      .cvContentBox {
+        position: relative;
+        margin-left: @marginLeft / 4;
+        margin-right: @marginLeft / 4;
+        color: rgb(0, 0, 0);
+        width: 100%- ((@marginLeft / 4)+ (@marginRight / 4)+2px);
+        background-color: rgba(255, 255, 244, 0.75);
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+        .cvPosition {
+          padding: 0.5em 2em 0.5em 2em;
+        }
+      }
+      .arrowContainer {
+        position: relative;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        .arrow {
+          width: 0px;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid black;
+        }
+      }
+    }
+  }
+
+  .tip {
+    padding: 10px;
+    min-width: 20px;
+    max-width: 250px;
+    background-color: rgba(255, 255, 255, 0.75);
+    position: fixed;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+  }
+  .tip p {
+    margin: 0;
+    color: black;
+    font-family: "Verdana";
+  }
+  // .l-tip::after,
+  // .r-tip::after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 3px;
+  //   height: 30px;
+  //   background-color: rgba(255, 255, 255, 0.75);
+  // }
+  // .l-tip::after {
+  //   bottom: -22px;
+  //   right: -10px;
+  //   transform: rotate(-45deg);
+  // }
+  // .r-tip::after {
+  //   left: -10px;
+  //   bottom: -22px;
+  //   transform: rotate(45deg);
+  // }
+
+  .cvBg {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/backgrounds/cv.jpg");
+    background-size: cover;
+    // background-attachment: fixed;
+    //background-size: 2827px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-position-x: left;
+    // background-position-y: top;
+    animation-name: fadeIn;
+    animation-duration: 10s;
+    opacity: 0.6;
+    filter: alpha(opacity=50);
+    position: absolute;
+  }
+}
