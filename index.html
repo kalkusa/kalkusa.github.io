@@ -1,199 +1,258 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/cv.css" />
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
+    <link rel="stylesheet" type="text/css" href="css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="css/loader.css" />
+    <script src="js/vue.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Arkadiusz K.</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-132814871-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/cv.css">
-	<link rel="stylesheet" type="text/css" href="css/about.css">
-	<link rel="stylesheet" type="text/css" href="css/contact.css">
-	<link rel="stylesheet" type="text/css" href="css/loader.css">
-	<script src="js/vue.min.js"></script>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/script.js"></script>
-	<title>Arkadiusz K.</title>
-</head>
+      gtag("config", "UA-132814871-1");
+    </script>
+  </head>
 
-<body>
-	<div id="loader-wrapper">
-		<img class="loader" src="images/preloader.gif">
-	</div>
-	<div id="container">
-		<header>
-			<nav>
-				<ul>
-					<li>
-						<a href="#main" onclick="navigate('main')"> Home </a>
-					</li>
-					<li>
-						<a href="#about" onclick="navigate('about')"> About </a>
-					</li>
-					<li>
-						<a href="#cv" onclick="navigate('cv')"> CV </a>
-					</li>
-					<li>
-						<a href="#contact" onclick="navigate('contact')"> Contact </a>
-					</li>
-				</ul>
-			</nav>
+  <body>
+    <div id="loader-wrapper">
+      <img class="loader" src="images/preloader.gif" />
+    </div>
+    <div id="container">
+      <header>
+        <nav>
+          <ul>
+            <li><a href="#main" onclick="navigate('main')"> Home </a></li>
+            <li><a href="#about" onclick="navigate('about')"> About </a></li>
+            <li><a href="#cv" onclick="navigate('cv')"> CV </a></li>
+            <li>
+              <a href="#contact" onclick="navigate('contact')"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-		</header>
+      <section id="main">
+        <div class="mainBg"></div>
+        <div class="aboutMeHome">
+          <div class="bigYo">Hi,</div>
+          <div class="name">I'm Arek.</div>
+          <div class="lookHowCuteIam">
+            <p>
+              I’m a full stack developer specialized in design, and
+              implementation of corporate web applications.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <section id="cv" class="invisible">
+        <div class="cvBg"></div>
+        <div class="sm">
+          <div class="topSpacer"></div>
+          <div class="cvContentBox">
+            <div class="cvPosition">
+              <p><b>Senior Software Developer</b></p>
+              <p>Fujitsu</p>
+              <p>Jul 2017 - now</p>
+            </div>
+          </div>
+          <div class="arrowContainer">
+            <center><div class="arrow"></div></center>
+          </div>
+          <div class="cvContentBox">
+            <div class="cvPosition">
+              <p><b>Development Engineer</b></p>
+              <p>Fujitsu</p>
+              <p>Jan 2016 - Jun 2017</p>
+            </div>
+          </div>
+          <div class="arrowContainer">
+            <center><div class="arrow"></div></center>
+          </div>
+          <div class="cvContentBox">
+            <div class="cvPosition">
+              <p><b>Junior Web Developer</b></p>
+              <p>UniCredit</p>
+              <p>Jul 2014 - Dec 2015</p>
+            </div>
+          </div>
+          <div class="arrowContainer">
+            <center><div class="arrow"></div></center>
+          </div>
+          <div class="cvContentBox">
+            <div class="cvPosition">
+              <p><b>Junior Software Developer</b></p>
+              <p>FABRITY K2</p>
+              <p>Jan 2013 - Jun 2014</p>
+            </div>
+          </div>
+          <div class="bottomSpacer"></div>
+        </div>
+        <div class="md">
+          <pinned-tooltip
+            :x="2300"
+            :y="2500"
+            direction="left"
+            position="Junior Software Developer"
+            company="FABRITY K2"
+            from="Jan 2013"
+            to="Jun 2014"
+          ></pinned-tooltip>
+          <pinned-tooltip
+            :x="2200"
+            :y="1000"
+            direction="right"
+            position="Senior Software Developer"
+            company="Fujitsu"
+            from="Jul 2017"
+            to="now"
+          ></pinned-tooltip>
+          <pinned-tooltip
+            :x="2200"
+            :y="1700"
+            direction="right"
+            position="Junior Web Developer"
+            company="UniCredit"
+            from="Jul 2014"
+            to="Dec 2015"
+          ></pinned-tooltip>
+          <pinned-tooltip
+            :x="2200"
+            :y="1500"
+            direction="left"
+            position="Development Engineer"
+            company="Fujitsu"
+            from="Jan 2016"
+            to="Jun 2017"
+          ></pinned-tooltip>
+        </div>
+        <div class="lg">
+          <pinned-tooltip
+            :x="2000"
+            :y="2200"
+            direction="left"
+            position="Junior Software Developer"
+            company="FABRITY K2"
+            from="Jan 2013"
+            to="Jun 2014"
+          ></pinned-tooltip>
+          <pinned-tooltip
+            :x="2100"
+            :y="1200"
+            direction="left"
+            position="Senior Software Developer"
+            company="Fujitsu"
+            from="Jul 2017"
+            to="now"
+          ></pinned-tooltip>
+          <pinned-tooltip
+            :x="2400"
+            :y="2000"
+            direction="right"
+            position="Junior Web Developer"
+            company="UniCredit"
+            from="Jul 2014"
+            to="Dec 2015"
+          ></pinned-tooltip>
+          <pinned-tooltip
+            :x="2300"
+            :y="1300"
+            direction="right"
+            position="Development Engineer"
+            company="Fujitsu"
+            from="Jan 2016"
+            to="Jun 2017"
+          ></pinned-tooltip>
+        </div>
+      </section>
 
-		<section id="main">
-			<div class="mainBg"></div>
-			<div class="aboutMeHome">
-				<div class="bigYo">
-					Hi,
-				</div>
-				<div class="name">I'm Arek.
-				</div>
-				<div class="lookHowCuteIam">
-					<p>
-						I’m a full stack developer specialized in design, and implementation of corporate web applications.
-					</p>
-				</div>
-			</div>
-		</section>
+      <section id="about" class="invisible">
+        <div class="aboutBg"></div>
+        <div class="aboutContentBox">
+          <div class="aboutContent">
+            <p>My name is <strong>Arkadiusz Kaɫkus</strong>.</p>
+            <p>I'm <strong>full stack web developer</strong>.</p>
+            <p>
+              My technology stack is <strong>C# /.NET / SQL</strong> on
+              <u>backend</u> and <strong>Angular / JavaScript </strong> on
+              <u>frontend</u>.
+            </p>
+            <p>I have {{ experience }} years of professional experience.</p>
+            <p>
+              I received M.Sc., and licenciate degrees from the University of
+              Łódź, Poland.
+            </p>
+            <!-- <p>I hold a Master of Computer Science from University of Łódź, Poland.</p> -->
+            <!-- https://www.dailywritingtips.com/masters-degree-or-masters-degree/ -->
+          </div>
+        </div>
+      </section>
 
-		<section id="cv" class="invisible">
-			<div class="cvBg"></div>
-			<div class="sm">
-				<div class="topSpacer"></div>
-				<div class="cvContentBox">
-					<div class="cvPosition">
-						<p>
-							<b>Senior Software Developer</b>
-						</p>
-						<p>Fujitsu</p>
-						<p>Jul 2017 - now</p>
-					</div>
-				</div>
-				<div class="arrowContainer">
-					<center>
-						<div class="arrow"></div>
-					</center>
-				</div>
-				<div class="cvContentBox">
-					<div class="cvPosition">
-						<p>
-							<b>Development Engineer</b>
-						</p>
-						<p>Fujitsu</p>
-						<p>Jan 2016 - Jun 2017</p>
-					</div>
-				</div>
-				<div class="arrowContainer">
-					<center>
-						<div class="arrow"></div>
-					</center>
-				</div>
-				<div class="cvContentBox">
-					<div class="cvPosition">
-						<p>
-							<b>Junior Web Developer</b>
-						</p>
-						<p>UniCredit</p>
-						<p>Jul 2014 - Dec 2015</p>
-					</div>
-				</div>
-				<div class="arrowContainer">
-					<center>
-						<div class="arrow"></div>
-					</center>
-				</div>
-				<div class="cvContentBox">
-					<div class="cvPosition">
-						<p>
-							<b>Junior Software Developer</b>
-						</p>
-						<p>FABRITY K2</p>
-						<p>Jan 2013 - Jun 2014</p>
-					</div>
-				</div>
-				<div class="bottomSpacer"></div>
-			</div>
-			<div class="md">
-				<pinned-tooltip :x="2300" :y="2500" direction="left" position="Junior Software Developer" company="FABRITY K2" from="Jan 2013"
-				    to="Jun 2014"></pinned-tooltip>
-				<pinned-tooltip :x="2200" :y="1000" direction="right" position="Senior Software Developer" company="Fujitsu" from="Jul 2017"
-				    to="now"></pinned-tooltip>
-				<pinned-tooltip :x="2200" :y="1700" direction="right" position="Junior Web Developer" company="UniCredit" from="Jul 2014"
-				    to="Dec 2015"></pinned-tooltip>
-				<pinned-tooltip :x="2200" :y="1500" direction="left" position="Development Engineer" company="Fujitsu" from="Jan 2016" to="Jun 2017"></pinned-tooltip>
-			</div>
-			<div class="lg">
-				<pinned-tooltip :x="2000" :y="2200" direction="left" position="Junior Software Developer" company="FABRITY K2" from="Jan 2013"
-				    to="Jun 2014"></pinned-tooltip>
-				<pinned-tooltip :x="2100" :y="1200" direction="left" position="Senior Software Developer" company="Fujitsu" from="Jul 2017"
-				    to="now"></pinned-tooltip>
-				<pinned-tooltip :x="2400" :y="2000" direction="right" position="Junior Web Developer" company="UniCredit" from="Jul 2014"
-				    to="Dec 2015"></pinned-tooltip>
-				<pinned-tooltip :x="2300" :y="1300" direction="right" position="Development Engineer" company="Fujitsu" from="Jan 2016" to="Jun 2017"></pinned-tooltip>
-			</div>
-		</section>
-
-		<section id="about" class="invisible">
-			<div class="aboutBg"></div>
-			<div class="aboutContentBox">
-				<div class="aboutContent">
-					<p>My name is
-						<strong>Arkadiusz Kaɫkus</strong>. </p>
-					<p> I'm
-						<strong>full stack web developer</strong>.
-					</p>
-					<p>My technology stack is
-						<strong>C# /.NET / SQL</strong> on
-						<u>backend</u> and
-						<strong>Angular / JavaScript </strong> on
-						<u>frontend</u>.
-					</p>
-					<p>I have {{experience}} years of professional experience.</p>
-					<p>I received M.Sc., and licenciate degrees from the University of Łódź, Poland.</p>
-					<!-- <p>I hold a Master of Computer Science from University of Łódź, Poland.</p> -->
-					<!-- https://www.dailywritingtips.com/masters-degree-or-masters-degree/ -->
-				</div>
-			</div>
-		</section>
-
-		<section id="contact" class="invisible">
-			<div class="contactBg"></div>
-			<div class="contactContentBox">
-				<div class="contactContentItem">
-					<a href="https://www.linkedin.com/in/kalkusa" target="_blank">
-						<img src="./images/logos/linkedin.png">
-					</a>
-				</div>
-				<div class="contactContentItem">
-					<a href="https://github.com/kalkusa" target="_blank">
-						<img src="./images/logos/github.png">
-					</a>
-				</div>
-				<div class="contactContentItem">
-					<a href="https://medium.com/@landeeyo" target="_blank">
-						<img src="./images/logos/medium.png" width="64px" height="64px">
-					</a>
-				</div>
-				<div class="contactContentItem">
-					<a href="https://stackoverflow.com/users/3775079/landeeyo" target="_blank">
-						<img src="./images/logos/stackoverflow.png" width="64px" height="64px">
-					</a>
-				</div>
-				<!-- <div class="contactContentItem">
+      <section id="contact" class="invisible">
+        <div class="contactBg"></div>
+        <div class="contactContentBox">
+          <div class="contactContentItem">
+            <a href="https://www.linkedin.com/in/kalkusa" target="_blank">
+              <img src="./images/logos/linkedin.png" />
+            </a>
+          </div>
+          <div class="contactContentItem">
+            <a href="https://github.com/kalkusa" target="_blank">
+              <img src="./images/logos/github.png" />
+            </a>
+          </div>
+          <div class="contactContentItem">
+            <a href="https://medium.com/@landeeyo" target="_blank">
+              <img src="./images/logos/medium.png" width="64px" height="64px" />
+            </a>
+          </div>
+          <div class="contactContentItem">
+            <a
+              href="https://stackoverflow.com/users/3775079/landeeyo"
+              target="_blank"
+            >
+              <img
+                src="./images/logos/stackoverflow.png"
+                width="64px"
+                height="64px"
+              />
+            </a>
+          </div>
+          <!-- <div class="contactContentItem">
 						<a href="https://stackoverflow.com/users/3775079/landeeyo" target="_blank">
 							<img src="./images/logos/codeproject.gif" width="64px" height="64px">
 						</a>
 					</div> -->
-				<div class="contactContentItem">
-					<a href="https://twitter.com/landeeyo" target="_blank">
-						<img src="./images/logos/twitter.png" width="64px" height="64px">
-					</a>
-				</div>
-			</div>
-		</section>
-	</div>
-</body>
-
+          <div class="contactContentItem">
+            <a href="https://twitter.com/landeeyo" target="_blank">
+              <img
+                src="./images/logos/twitter.png"
+                width="64px"
+                height="64px"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
